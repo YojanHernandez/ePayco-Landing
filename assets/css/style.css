@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Driftline";
+    src: url('../fonts/Driftline.ttf') format('truetype');
+}
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #0066ff 0%, #00c9ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dark .gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
+}
+
+.dark .hover-lift:hover {
+    box-shadow: 0 10px 30px rgba(96, 165, 250, 0.3);
+}
+
+.custom-font {
+    font-family: "Driftline", sans-serif;
+}
