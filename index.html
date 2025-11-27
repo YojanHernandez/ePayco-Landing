@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yojan Hernández - Webmaster ePayco</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -12,41 +17,50 @@
     <link rel="icon" href="assets/images/bracket.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <body class="bg-white dark:bg-gray-900 transition-colors duration-300">
+  <body class="bg-white dark:bg-gray-950 transition-colors duration-300">
     <!-- Navigation -->
     <nav
-      class="fixed w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-md z-50 shadow-sm"
+      class="fixed w-full bg-white/90 dark:bg-black/95 backdrop-blur-md z-50 shadow-sm dark:border-b dark:border-gray-800"
     >
       <div
         class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
       >
         <div class="flex items-center gap-2">
-          <img
-            class="w-6 h-6 gradient-text"
-            src="assets/images/bracket.svg"
-            alt="bracket"
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 dark:text-white"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"
+            />
+          </svg>
           <p class="text-2xl gradient-text custom-font font-italic">YojanDev</p>
         </div>
         <div class="flex items-center gap-6">
           <a
             href="#sobre-mi"
-            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+            class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >Sobre Mí</a
           >
           <a
             href="#experiencia"
-            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+            class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >Experiencia</a
           >
           <a
             href="#contacto"
-            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition"
+            class="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition"
             >Contacto</a
           >
           <button
             id="darkModeToggle"
-            class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+            class="p-2 rounded-lg bg-gray-100 dark:bg-white hover:bg-gray-200 transition"
           >
             <svg
               class="w-5 h-5 dark:hidden"
@@ -82,14 +96,14 @@
               Por qué quiero ser el
               <span class="gradient-text">Webmaster de ePayco</span>
             </h1>
-            <p class="text-gray-600 dark:text-gray-300 mb-8">
+            <p class="text-gray-600 dark:text-gray-200 mb-8">
               Con más de 5 años de experiencia en desarrollo web y WordPress,
               estoy listo para garantizar la operación, evolución y seguridad
               del ecosistema digital de ePayco.
             </p>
             <a
               href="#contacto"
-              class="inline-block hover:bg-black hover:text-white border-2 border-black px-8 py-3 rounded-lg font-semibold transition transform hover:scale-105"
+              class="inline-block bg-gray-900 text-white hover:bg-black dark:bg-blue-600 dark:hover:bg-blue-700 border-2 border-gray-900 dark:border-blue-600 px-8 py-3 rounded-lg font-semibold transition transform hover:scale-105"
               >Contáctame</a
             >
           </div>
@@ -105,7 +119,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="sobre-mi" class="py-20 bg-gray-50 dark:bg-gray-800 px-6">
+    <section id="sobre-mi" class="py-20 bg-gray-50 dark:bg-gray-900 px-6">
       <div class="max-w-7xl mx-auto">
         <h3
           class="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12"
@@ -113,7 +127,9 @@
           Alineación con ePayco
         </h3>
         <div class="grid md:grid-cols-3 gap-8 text-center">
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-xl hover-lift">
+          <div
+            class="bg-white dark:bg-gray-900 dark:border dark:border-gray-800 p-8 rounded-xl hover-lift"
+          >
             <div class="text-blue-600 dark:text-blue-400 mb-4">
               <svg
                 class="w-12 h-12 mx-auto"
@@ -132,12 +148,12 @@
             <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Seguridad & Escalabilidad
             </h4>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600 dark:text-gray-200">
               Experiencia en implementación de certificados SSL, backups
               automatizados y arquitecturas escalables para plataformas fintech.
             </p>
           </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-xl hover-lift">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover-lift">
             <div class="text-blue-600 dark:text-blue-400 mb-4">
               <svg
                 class="w-12 h-12 mx-auto"
@@ -156,12 +172,12 @@
             <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Optimización SEO
             </h4>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600 dark:text-gray-200">
               Dominio de SEO técnico, Core Web Vitals, y herramientas como Yoast
               SEO, GA4 y Google Tag Manager.
             </p>
           </div>
-          <div class="bg-white dark:bg-gray-700 p-8 rounded-xl hover-lift">
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl hover-lift">
             <div class="text-blue-600 dark:text-blue-400 mb-4">
               <svg
                 class="w-12 h-12 mx-auto"
@@ -180,7 +196,7 @@
             <h4 class="text-xl font-bold text-gray-900 dark:text-white mb-3">
               Desarrollo WordPress
             </h4>
-            <p class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600 dark:text-gray-200">
               Más de 5 años desarrollando plugins y temas personalizados con
               PHP, React JS, y tecnologías modernas.
             </p>
@@ -199,7 +215,7 @@
         </h3>
         <div class="space-y-8">
           <div
-            class="bg-white dark:bg-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
+            class="bg-white dark:bg-gray-900 dark:border dark:border-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
           >
             <div class="flex justify-between items-start mb-4">
               <div>
@@ -215,7 +231,7 @@
                 >Ultimo</span
               >
             </div>
-            <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-4">
+            <ul class="space-y-2 text-gray-600 dark:text-gray-200 mb-4">
               <li>
                 ✓ Desarrollo de plugins y plantillas personalizadas para
                 WordPress
@@ -228,38 +244,38 @@
             </ul>
             <div class="flex flex-wrap gap-2">
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >WordPress</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >PHP</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >React JS</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >JavaScript</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >Gutenberg</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >APIs</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >HubSpot</span
               >
             </div>
           </div>
 
           <div
-            class="bg-white dark:bg-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
+            class="bg-white dark:bg-gray-900 dark:border dark:border-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
           >
             <div class="flex justify-between items-start mb-4">
               <div>
@@ -271,7 +287,7 @@
                 </p>
               </div>
             </div>
-            <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-4">
+            <ul class="space-y-2 text-gray-600 dark:text-gray-200 mb-4">
               <li>
                 ✓ Desarrollo de plugins y temas WordPress personalizados con ACF
                 (FE/BE)
@@ -282,34 +298,34 @@
             </ul>
             <div class="flex flex-wrap gap-2">
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >WordPress</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >PHP</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >ACF</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >HTML</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >CSS</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >JavaScript</span
               >
             </div>
           </div>
 
           <div
-            class="bg-white dark:bg-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
+            class="bg-white dark:bg-gray-900 dark:border dark:border-gray-800 border-l-4 border-blue-600 p-8 rounded-lg shadow-lg hover-lift"
           >
             <div class="flex justify-between items-start mb-4">
               <div>
@@ -321,7 +337,7 @@
                 </p>
               </div>
             </div>
-            <ul class="space-y-2 text-gray-600 dark:text-gray-300 mb-4">
+            <ul class="space-y-2 text-gray-600 dark:text-gray-200 mb-4">
               <li>✓ Desarrollo de plugins y temas WordPress</li>
               <li>✓ Integración con HubSpot y servicios de email marketing</li>
               <li>
@@ -333,31 +349,31 @@
             </ul>
             <div class="flex flex-wrap gap-2">
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >WordPress</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >PHP</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >HubSpot</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >Responsys</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >Linux</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >Docker</span
               >
               <span
-                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
+                class="bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-white px-3 py-1 rounded-full text-sm font-medium"
                 >Email Marketing</span
               >
             </div>
@@ -376,17 +392,17 @@
         </h3>
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p class="text-gray-600 dark:text-gray-300 mb-6">
+            <p class="text-gray-600 dark:text-gray-200 mb-6">
               ePayco es una compañía tecnológica líder en procesamiento de pagos
               en Colombia, con más de 130,000 empresas vinculadas y 7.5 millones
               de usuarios. Su misión de entender el negocio de los clientes y
               adaptarse con innovación e inteligencia resuena profundamente con
               mi enfoque de desarrollo.
             </p>
-            <p class="text-gray-600 dark:text-gray-300 mb-6">
+            <p class="text-gray-600 dark:text-gray-200 mb-6">
               Como Webmaster, puedo aportar mi experiencia en:
             </p>
-            <ul class="space-y-3 text-gray-600 dark:text-gray-300">
+            <ul class="space-y-3 text-gray-600 dark:text-gray-200">
               <li class="flex items-start gap-3">
                 <svg
                   class="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
@@ -515,18 +531,18 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contacto" class="py-20 bg-gray-50 dark:bg-gray-800 px-6">
+    <section id="contacto" class="py-20 bg-gray-50 dark:bg-gray-900 px-6">
       <div class="max-w-4xl mx-auto text-center">
         <h3 class="text-4xl font-bold text-gray-900 dark:text-white mb-8">
           Hablemos
         </h3>
-        <p class="text-xl text-gray-600 dark:text-gray-300 mb-12">
+        <p class="text-xl text-gray-600 dark:text-gray-200 mb-12">
           Estoy listo para aportar mi experiencia y pasión al equipo de ePayco
         </p>
         <div class="grid md:grid-cols-3 gap-8">
           <a
             href="tel:+573007711934"
-            class="bg-white dark:bg-gray-700 p-6 rounded-xl hover-lift flex flex-col items-center gap-3"
+            class="bg-white dark:bg-gray-900 dark:border dark:border-gray-800 p-6 rounded-xl hover-lift flex flex-col items-center gap-3"
           >
             <svg
               class="w-8 h-8 text-blue-600 dark:text-blue-400"
